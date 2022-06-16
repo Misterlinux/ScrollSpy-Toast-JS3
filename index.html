@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <!--so, pureCSS-->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
+
+    <!--some boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <script src="https://kit.fontawesome.com/331132e12f.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- so, for some files its reccomented to put the entire http:// if from our hardrive, add the protocol 
+    it would be better to download the botmoster and call it locally tho, we need to include -->
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="http://botmonster.com/jquery-bootpag/jquery.bootpag.js"></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  </head>
+<body>
+
+<div class="title">
+  <h1>Scrollspay exercise</h1>
+
+  <p>Codepen to show the scrollspy Bootstrap component</p>
+  <p>This first one is structured in 2 columns thanks to .flex-column for the menu,also it 
+    works based on the number of menu items being equal to the number of paragraphs in the scroll text
+  </p>
+  
+</div>
+
+<div class="pure-g">
+
+<!-- so, we can use align-items- for the width of the menu items, we can use -center to block at the center
+-->
+<div class="pure-u-1-2 ">
+  <menu>
+    <nav id="select" class="navbar flex-column p3 align-items-stretch">
+      <!-- nav-pills is what allows the active to have the color background -->
+      <a class="navbar-brand" href="#">Navbar</a>
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item active">
+          <!--to avoid having already checked active links I removed the classes from a-->
+          <a href="#uno" >Lorem.</a>
+        </li>
+        <li class="nav-item">
+          <a href="#due" >Lorem.</a>
+        </li>
+        <li class="nav-item">
+          <a href="#tre" >Lorem.</a>
+        </li>
+        <li class="nav-item ms-3">
+          <a href="#quat">margin items</a>
+        </li>
+        <li class="nav-item ms-3">
+          <a href="#cinc">margin items</a>
+        </li>
+      </ul>
+    </nav>
+  </menu>
+
+</div>
+<div class="pure-u-1-2 contenuto" id="serve">
+<!--it seems we dont really use the scrollSPY term by itself -->
+  <div class="p-3 ps-5">
+    <section>
+      <h2 id="uno">Id on title</h2>
+      <p>
+        So, the text on menu click is based on href="#" link and id on title
+      </p>
+    </section>
+    <section>
+      <h2 id="due">Lorem 2</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, corrupti nisi dolor suscipit odit ad!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, maxime.
+      </p>
+    </section>
+    <section>
+      <h2 id="tre">Lorem 3</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, corrupti nisi dolor suscipit odit ad!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, maxime.
+      </p>
+    </section>
+    <section id="finalmente">
+      <h2 id="quat">Lorem 4</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, corrupti nisi dolor suscipit odit ad!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, maxime.
+      </p>
+    </section>
+    <section>
+      <h2 id="cinc">Lorem 5</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, corrupti nisi dolor suscipit odit ad!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, maxime.
+      </p>
+    </section>
+
+  </div>
+</div>
+
+</div>
+
+
+
+<h5>In this example we limit the active effect to 3 menu-items, including a dropdown, 
+  but with more paragraph than buttons, we needed to add extra js for it to not give many errors</h5>
+
+<div class="toppe">
+<!-- we need the scroll as target, and each main section has an ID from the href -->
+  <nav id="nav2" class="navbar">
+    <a href="#" class="navbar-brand">Lorem.</a>
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="#una">Lorem.</a></li>
+      <li class="nav-item"><a href="#dua">Rem.</a></li>
+      <li class="nav-item">
+        <a href="" class="dropdown-toggle" data-bs-toggle="dropdown">sorted</a>
+        <ul class="dropdown-menu">
+          <li><a href="#tra" class="dropdown-item">third</a></li>
+          <li><a href="#quata" class="dropdown-item">Forth</a></li>
+          <hr class="dropdown-divider">
+          <li><a href="#cina" class="dropdown-item">Fifth</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="more">
+    <div  >
+      <section id="testate">
+        <h3 id="una">Lorem, ipsum dolor11</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi minima possimus et quibusdam incidunt, ratione perspiciatis natus corporis ab vero quaerat, facere eos? Rem placeat ipsa culpa dolore ad eligendi.</p>
+      </section>
+      <section>
+        <h3 id="dua">Praesentium, veritatis labore!22</h3>
+        <p>Aspernatur vel exercitationem voluptate dolor impedit adipisci a dolores voluptatibus asperiores in tempora necessitatibus dolorem, quaerat temporibus maiores optio dolorum placeat eos consequatur repellat distinctio omnis? Ipsa sit labore fugit.</p>
+      </section>
+      <section>
+        <h3 id="tra">Sit, natus fugiat?33</h3>
+        <p>Beatae in reprehenderit voluptatem nesciunt dignissimos, pariatur quae blanditiis magni accusantium consectetur incidunt? A delectus ab, minus distinctio voluptatem, cum sequi iusto esse quia, quibusdam explicabo aliquam ipsum temporibus. Neque!</p>
+      </section>
+      <section>
+        <h3 id="quata">Sit, natus fugiat?44</h3>
+        <p>Beatae in reprehenderit voluptatem nesciunt dignissimos, pariatur quae blanditiis magni accusantium consectetur incidunt? A delectus ab, minus distinctio voluptatem, cum sequi iusto esse quia, quibusdam explicabo aliquam ipsum temporibus. Neque!</p>
+      </section>
+      <section>
+        <h3 id="cina">Sit, natus fugiat?55</h3>
+        <p>Beatae in reprehenderit voluptatem nesciunt dignissimos, pariatur quae blanditiis magni accusantium consectetur incidunt? A delectus ab, minus distinctio voluptatem, cum sequi iusto esse quia, quibusdam explicabo aliquam ipsum temporibus. Neque!</p>
+      </section>
+    </div>
+  </main>
+
+</div>
+
+<!-- ------------------------------- -->
+<h4>In this section we have toast in position-fixed and a button to make them re-appear after getting close </h4>
+
+<div class="centrato">
+  <button class="btn btn-warning me-auto" id="cambio">Reset Pop-Ups</button>
+</div>
+
+<!-- we can also create cards-like structures-->
+<!-- toast have built in some tranlucenty but we can increasi it with style z-index-->
+<div class="position-relative">
+
+  <div class="position-fixed bottom-0 start-0 ms-3 mb-3" style="z-index: 0">
+    <div class="toast show hide" id="ecco" >
+
+      <div class="toast-header">
+        <h5>This is the left </h5>
+        <button class="btn-close ms-auto" id="ecco1"></button>
+      </div>
+      <div class="toast-body pure-g">
+        <div class="pure-u-1-3">
+          <img src="https://bit.ly/3tvUtWn" class="pure-img">
+        </div>
+        <div class="pure-u-2-3 p-3">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto esse maiores, id a delectus quisquam!</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="position-relative">
+
+<div class="toast-container position-fixed bottom-0 end-0 me-3 mb-3">
+
+  <div class="toast show hide" id="tuno">
+    <div class="toast-header">
+      <h5>Lorem, ipsum.</h5>
+      <button class="btn-close ms-auto" id="tuno1"></button>
+    </div>
+    <div class="toast-body">
+      <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum consequuntur incidunt quam saepe inventore eveniet quas aliquam dolorum ratione nostrum!</h6>
+    </div>
+  </div>
+
+  <div class="toast show hide" id="cue" style="z-index: -3">
+    <div class="toast-header">
+      <h5>Lorem, ipsum.</h5>
+      <button class="btn-close ms-auto" id="cue1"></button>
+    </div>
+    <div class="toast-body">
+      <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum consequuntur incidunt quam saepe inventore eveniet quas aliquam dolorum ratione nostrum!</h6>
+    </div>
+  </div>
+
+</div>
+
+</div>
+  
+<!-- -------------------- -->
+
+<script>
+
+let ecco = document.getElementById("ecco")
+let ecco1 = document.getElementById("ecco1")
+
+function hiding(dele){
+  dele.classList.toggle("show")
+}
+
+ecco1.onclick=(()=>{
+  hiding(ecco)
+})
+
+let tuno = document.getElementById("tuno")
+let tuno1 = document.getElementById("tuno1")
+
+let cue = document.getElementById("cue")
+let cue1 = document.getElementById("cue1")
+
+tuno1.onclick= (()=>{
+  hiding(tuno)
+})
+
+cue1.onclick= (()=>{
+  hiding(cue)
+})
+
+let cambio = document.getElementById("cambio")
+cambio.addEventListener("click", ()=>{
+  hiding(tuno)
+  hiding(cue)
+})
+
+</script>
+
+
+
+<script>
+//it would be easier to have the list element be clickable instead of the <a> tag
+let linea = document.querySelectorAll("#nav2 .nav-item")
+
+linea.forEach(p=>{
+  p.onclick=(()=>{
+    linea.forEach(l=>l.classList.remove("active"))
+    p.classList.add("active") 
+  })
+})
+
+let more = document.getElementById("more")
+let presi = document.querySelectorAll("main section")
+
+more.addEventListener("scroll", ()=>{
+  presi.forEach((x,y)=>{
+    let test = x.getBoundingClientRect().y
+    if( test < window.innerHeight - 400){
+      linea.forEach(j=> j.classList.remove("active"))
+
+      let work = (y<=2) ? 
+        linea[y].classList.add("active") 
+        : 
+        linea[2].classList.add("active")
+      }
+
+  })
+})
+
+/*------------------*/
+
+let eccoli = document.querySelectorAll("menu li")
+
+eccoli.forEach(i=>{
+  i.onclick = (()=>{
+      eccoli.forEach(o=> o.classList.remove("active"))
+      i.classList.add("active")
+  })
+})
+
+  /*so, remember that when selecting the WINDOW to scroll you need topick the 
+  entire cut windowd (like here in the pure-u-part) you need to select a HTML element not just a target*/
+let scrolling = document.getElementById("serve")
+let singoli = document.querySelectorAll("#serve section")
+
+scrolling.addEventListener("scroll", ()=>{
+
+  singoli.forEach((x,y)=>{
+    let space = x.getBoundingClientRect().y
+
+    if(space < window.innerHeight - 456){
+      eccoli.forEach( z=> z.classList.remove("active"))
+      eccoli[y].classList.add("active")
+    }
+  })
+})
+
+</script>
+
+
+</body>
+</html>

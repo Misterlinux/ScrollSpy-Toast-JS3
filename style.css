@@ -1,0 +1,65 @@
+
+html,body,div,form,fieldset,h1,h2,h3,h4,h5,h6,p,blockquote,pre,li,ul,ol,button
+{
+    font-size: 100%;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: 0;
+    outline: 0;
+    background: transparent;
+
+    list-style: none;
+}
+table
+{
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+th,
+td
+{
+    text-align: left;
+    vertical-align: top;
+}
+img
+{
+    border: 0;
+}
+
+/*-------------------------- */
+
+.title{
+    text-align: center;
+}
+
+.contenuto{
+    height: 300px;
+    overflow: scroll;
+}
+
+#serve section{
+    margin: 65px 0px
+}
+
+/*----------------*/
+
+#more{
+    height: 350px;
+    overflow: scroll;
+}
+
+#more section{
+    margin: 65px 0px;
+}
+
+/*----------------*/
+
+.toppe{
+    margin: 50px 0px;
+}
+
+.centrato{
+    text-align: center;
+}
